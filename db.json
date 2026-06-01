@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "时尚黑框",
+      "price": 199,
+      "desc": "经典百搭",
+      "image": "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 2,
+      "name": "防蓝光眼镜",
+      "price": 299,
+      "desc": "护眼必备",
+      "image": "https://images.unsplash.com/photo-1577803645773-9a465d7f2d54?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 3,
+      "name": "轻盈钛金属",
+      "price": 399,
+      "desc": "超轻材质，佩戴零负担",
+      "image": "https://images.unsplash.com/photo-1548383652-4b03924fbde6?auto=format&fit=crop&w=800&q=80"
+    }
+  ]
+}
