@@ -44,10 +44,8 @@
         <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <p class="text-lg font-semibold text-slate-900">微信二维码</p>
           <div class="mt-4 flex items-center gap-4">
-            <div class="h-40 w-40 rounded-3xl bg-slate-100 p-4">
-              <div class="flex h-full items-center justify-center text-slate-400">
-                微信二维码
-              </div>
+            <div class="h-40 w-40 rounded-3xl bg-slate-100 p-2 overflow-hidden">
+              <img src="/qrcode.png" alt="微信二维码" class="h-full w-full object-cover rounded-2xl" />
             </div>
             <div class="text-slate-700">
               <p class="font-semibold">扫一扫加客服</p>
