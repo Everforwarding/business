@@ -6,6 +6,7 @@
         :src="product.image"
         :alt="product.name"
         class="h-full w-full object-cover"
+        loading="lazy"
       />
       <div v-else class="flex h-full items-center justify-center text-slate-500">
         无图片预览
@@ -15,9 +16,12 @@
     <p class="mt-3 text-slate-500">{{ product.desc || product.description }}</p>
     <div class="mt-6 flex items-center justify-between">
       <span class="text-2xl font-bold text-slate-900">¥{{ product.price }}</span>
-      <button class="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-700">
-        立即咨询
-      </button>
+      <a
+        :href="`/products/${product.id || product._id || ''}`"
+        class="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-700"
+      >
+        查看详情
+      </a>
     </div>
   </article>
 </template>
