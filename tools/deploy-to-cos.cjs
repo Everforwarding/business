@@ -11,7 +11,7 @@ function walk(dir, filelist = [], base = dir) {
     if (stat.isDirectory()) {
       walk(filepath, filelist, base)
     } else {
-      filelist.push({ path: filepath, relative: path.relative(base, filepath).replace(/\\\\/g, '/') })
+      filelist.push({ path: filepath, relative: path.relative(base, filepath).replace(/\\/g, '/') })
     }
   })
   return filelist
@@ -38,10 +38,9 @@ async function main() {
   const cos = new COS({ SecretId: SECRET_ID, SecretKey: SECRET_KEY })
 
   const files = walk(distDir).filter(f => {
-    if (f.relative === 'index.html' || f.relative === 'manifest.json' || f.relative === 'robots.txt' || f.relative === 'sitemap.xml') {
-      return true
-    }
-    return f.relative.startsWith('assets/')
+    // 排除 .git 目录
+    if (f.relative.startsWith('.git/') || f.relative === '.git') return false
+    return true
   })
   console.log(`准备上传 ${files.length} 个文件到 COS 存储桶 ${BUCKET}（区域 ${REGION}）`)
 
