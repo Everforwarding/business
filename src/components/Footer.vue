@@ -1,13 +1,18 @@
 <template>
-  <footer class="bg-slate-900 text-slate-200 rounded-t-2xl">
-    <div class="mx-auto max-w-6xl px-4 py-6 sm:px-6">
-      <div class="grid gap-3 text-sm sm:grid-cols-[1fr_auto] sm:items-center">
-        <div>
-          <p class="font-semibold">{{ site.name }}</p>
-          <p class="mt-1">📞 {{ site.phone }}</p>
-          <p class="mt-1 text-slate-400">{{ site.address }}</p>
+  <footer class="border-t border-white/5 bg-zinc-950">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
+        <div class="glass-card rounded-2xl p-5 max-w-md w-full">
+          <p class="text-lg font-semibold text-zinc-100">{{ site.name }}</p>
+          <p class="mt-2 text-sm text-zinc-500">专业验光与配镜服务，让您的每一天都更清晰、更舒适。</p>
+          <div class="mt-3 space-y-1 text-sm text-zinc-400">
+            <p>{{ site.phone }}</p>
+            <p class="text-zinc-500">{{ site.address }}</p>
+          </div>
         </div>
-        <div class="text-right text-slate-400">© 2026 {{ site.name }} 版权所有</div>
+        <p class="text-sm text-zinc-600">
+          &copy; 2026 {{ site.name }}
+        </p>
       </div>
     </div>
   </footer>

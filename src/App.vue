@@ -1,12 +1,12 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-slate-50">
+  <div class="min-h-screen flex flex-col bg-mesh text-zinc-50">
     <Navbar />
-    <main class="flex-1">
-      <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-        <div class="site-container bg-white/80 shadow-lg card-smooth">
-          <router-view />
-        </div>
-      </div>
+    <main class="flex-1 w-full">
+      <router-view v-slot="{ Component }">
+        <transition name="page" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </main>
     <Footer />
   </div>

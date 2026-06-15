@@ -1,13 +1,26 @@
 <template>
-  <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-    <h1 class="text-3xl font-bold text-slate-900">产品展示</h1>
-    <p class="mt-2 text-slate-600">按分类查看热销眼镜，找到适合你的风格。</p>
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="mb-12 text-center">
+      <p class="text-xs font-medium uppercase tracking-[0.3em] text-cyan-400/80">精选推荐</p>
+      <h1 class="mt-3 text-4xl font-bold text-zinc-50 sm:text-5xl">发现你的下一副眼镜</h1>
+      <p class="mx-auto mt-4 max-w-xl text-zinc-500">通过我们的产品系列，找到既时尚又舒适的眼镜，适配多种脸型与风格。</p>
+    </div>
 
-    <div v-if="store.loading" class="mt-10 text-center text-slate-500">正在加载商品，请稍候...</div>
-    <div v-else-if="store.error" class="mt-10 rounded-3xl border border-rose-200 bg-rose-50 p-6 text-rose-700">
+    <!-- States -->
+    <div v-if="store.loading" class="mt-10 text-center">
+      <div class="inline-flex items-center gap-3 rounded-2xl bg-white/5 px-6 py-4 text-zinc-400">
+        <span class="inline-block h-4 w-4 animate-spin rounded-full border-2 border-cyan-400 border-t-transparent"></span>
+        正在加载商品，请稍候...
+      </div>
+    </div>
+
+    <div v-else-if="store.error" class="mt-10 rounded-2xl border border-red-500/20 bg-red-500/5 p-6 text-red-400 text-center">
       {{ store.error }}
     </div>
-    <div v-else class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+    <!-- Product Grid -->
+    <div v-else class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
       <ProductCard
         v-for="product in store.list"
         :key="product.id"
