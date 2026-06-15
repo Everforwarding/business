@@ -29,3 +29,5 @@ npm-debug.log*
 # Misc
 db.json
 routes.json
+.vercel
+.env*

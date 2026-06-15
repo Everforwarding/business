@@ -1,5 +1,5 @@
 <template>
-  <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm card-smooth">
     <div class="h-44 overflow-hidden rounded-3xl bg-slate-100">
       <img
         v-if="product.image"
