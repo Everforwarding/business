@@ -13,7 +13,8 @@
     "postbuild": "npm run generate-sitemap",
     "deploy:tencent": "node tools/deploy-runner.cjs",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "release": "node tools/release.cjs"
 
   },
   "dependencies": {

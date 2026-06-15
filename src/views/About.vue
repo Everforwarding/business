@@ -25,6 +25,18 @@
             <span class="text-zinc-300">快速服务与专业售后保障。</span>
           </li>
         </ul>
+        <div class="mt-10 grid gap-5 sm:grid-cols-2">
+          <div class="rounded-[1.8rem] bg-slate-900/70 p-6">
+            <p class="text-sm uppercase tracking-[0.3em] text-cyan-400/80">专业团队</p>
+            <h3 class="mt-3 text-2xl font-semibold text-white">20+ 年配镜经验</h3>
+            <p class="mt-3 text-slate-400 leading-relaxed">验光师团队经验丰富，细致检测每一个视力细节。</p>
+          </div>
+          <div class="rounded-[1.8rem] bg-slate-900/70 p-6">
+            <p class="text-sm uppercase tracking-[0.3em] text-amber-400/80">优质服务</p>
+            <h3 class="mt-3 text-2xl font-semibold text-white">贴心售后</h3>
+            <p class="mt-3 text-slate-400 leading-relaxed">配镜后支持调试、维修和镜片升级，安心无忧。</p>
+          </div>
+        </div>
       </div>
 
       <!-- Right: Store info card -->

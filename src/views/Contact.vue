@@ -51,6 +51,19 @@
             </div>
           </div>
         </div>
+        <div class="glass-card rounded-2xl p-5">
+          <p class="text-sm font-medium text-zinc-300">常见问题</p>
+          <div class="mt-4 space-y-3 text-sm text-zinc-400">
+            <div class="rounded-2xl bg-slate-900/60 px-4 py-3">
+              <p class="font-medium text-white">验光需要多长时间？</p>
+              <p class="mt-1 text-slate-400">一般在30分钟左右，视需求可能更久。</p>
+            </div>
+            <div class="rounded-2xl bg-slate-900/60 px-4 py-3">
+              <p class="font-medium text-white">是否支持免费验光？</p>
+              <p class="mt-1 text-slate-400">是的，本店提供专业验光服务，详情可咨询客服。</p>
+            </div>
+          </div>
+        </div>
 
         <BookingForm />
       </div>
